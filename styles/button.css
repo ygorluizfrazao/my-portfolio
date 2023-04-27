@@ -1,0 +1,94 @@
+:root {
+  --btn-color-primary: #ddd5d5;
+  --btn-color-secondary: #3c3939;
+  --btn-color-over-secondary: white;
+  --btn-color-borders: black;
+  --btn-color-over-primary: black;
+  --btn-text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.button {
+  display: flex;
+  background-color: var(--btn-color-secondary);
+  color: var(--btn-color-over-secondary);
+  border-radius: 12px;
+  padding: 12px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+  gap: 4px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border: none;
+  cursor: pointer;
+  height: fit-content;
+}
+
+.button span {
+  text-align: center;
+  vertical-align: middle;
+  height: fit-content;
+}
+
+.button:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.button.compact {
+  gap: 0;
+}
+
+.button.compact .text-container {
+  width: 0;
+  height: 0;
+  opacity: 0;
+}
+
+.button.compact:hover {
+  gap: 4px;
+}
+
+.button.compact:hover .text-container {
+  width: 100%;
+  height: fit-content;
+  opacity: 1;
+  transition: all 500ms;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+  align-content: center;
+}
+
+.button.compact:hover .text-container span {
+  text-align: center;
+  vertical-align: middle;
+}
+
+@keyframes rotate360 {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.rotate-icon:hover .icon-container {
+  animation-name: rotate360;
+  animation-duration: 1000ms;
+}
+
+
+.green {
+  background-color: green;
+}
+
+.red {
+  background-color: red;
+}
+
+.blue {
+  background-color: blue;
+}

@@ -1,0 +1,8 @@
+.divider {
+    display: block;
+    width: 90%;
+    align-self: center;
+    opacity: 25%;
+    height: 3px;
+    background-color: var(--color-over-tertiary);
+}

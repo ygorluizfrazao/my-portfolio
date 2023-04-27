@@ -1,0 +1,63 @@
+@import "./card.css";
+@import "./divider.css";
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+:root {
+    --color-primary: #c7daf7;
+    --color-secondary: #485ede;
+    --color-tertiary: white;
+    --color-over-primary: black;
+    --color-over-secondary: white;
+    --color-over-tertiary: black;
+    --color-borders: black;
+    --color-over-primary: black;
+    --text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  
+    --spacing-xsmall: 4px;
+    --spacing-small: 8px;
+    --spacing-medium: 16px;
+    --spacing-large: 32px;
+    --spacing-xlarge: 64px;
+  
+    --border-radius: 12px;
+  }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+    overflow-x: hidden;
+    background-color: var(--color-primary);
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+header{
+    color: var(--color-over-secondary);
+    padding: var(--spacing-small) var(--spacing-large);
+    background-color: var(--color-secondary);
+}
+
+main {
+    padding: var(--spacing-small) var(--spacing-large);
+}
+
+.card {
+    border-radius: var(--border-radius);
+    background-color: var(--color-tertiary);
+}
+
+.project-card {
+    display: flex;
+    flex-direction: column;
+    max-width: 300px;
+    max-height: 400px;
+    padding: var(--spacing-medium);
+}
+
+

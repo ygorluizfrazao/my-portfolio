@@ -1,7 +1,9 @@
-@import "./card.css";
-@import "./divider.css";
-@import "./info-box.css";
-@import "./button.css";
+@import "./controls/card.css";
+@import "./controls/divider.css";
+@import "./controls/info-box.css";
+@import "./controls/button.css";
+@import "./controls/tooltip.css";
+@import "./controls/chip.css";
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 :root {
@@ -14,6 +16,7 @@
     --color-borders: black;
     --color-over-primary: black;
     --text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
   
     --spacing-xsmall: 4px;
     --spacing-small: 8px;
@@ -22,6 +25,10 @@
     --spacing-xlarge: 64px;
   
     --border-radius: 12px;
+
+    --icon-small: 32px;
+    --icon-medium: 48px;
+    --icon-large: 60px;
   }
 
 * {
@@ -60,7 +67,7 @@ main {
     flex-direction: column;
     max-width: 300px;
     min-height: 200px;
-    padding: var(--spacing-medium);
+    padding: var(--spacing-xsmall) var(--spacing-medium);
 }
 
 .project-card .slide-show img{
@@ -91,10 +98,19 @@ main {
     font-size: normal;
 }
 
+.tooltip {
+    cursor: default;
+}
+
+.tooltip .tooltiptext{
+    font-size: x-small;
+    font-family: 'Roboto', sans-serif;
+}
+
 .floating {
     position: fixed;
     align-self: flex-end;
-    z-index: 999
+    z-index: 10
 }
 
 .data {
@@ -104,4 +120,28 @@ main {
     height: 100%;
     padding: var(--spacing-small) 0px;
     gap: var(--spacing-small);
+}
+
+.chip {
+    border-color: var(--color-secondary);
+    box-shadow: 0 0 10px var(--color-secondary);
+    background-color: var(--color-secondary);
+    color: var(--color-over-secondary);
+}
+
+.icons {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: end;
+    flex-wrap: wrap;
+    gap: var(--spacing-small);
+}
+
+.icons .icon {
+    width: var(--icon-small);
+    height: var(--icon-small);
+    object-fit: cover;
+    border-radius: 50%;
+    overflow: hidden;
 }

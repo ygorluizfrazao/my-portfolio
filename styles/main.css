@@ -4,32 +4,31 @@
 @import "./controls/button.css";
 @import "./controls/tooltip.css";
 @import "./controls/chip.css";
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 
 :root {
-    --color-primary: #c7daf7;
-    --color-secondary: #485ede;
-    --color-tertiary: white;
-    --color-over-primary: black;
-    --color-over-secondary: white;
-    --color-over-tertiary: black;
-    --color-borders: black;
-    --color-over-primary: black;
-    --text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  --color-primary: #c7daf7;
+  --color-secondary: #485ede;
+  --color-tertiary: white;
+  --color-over-primary: black;
+  --color-over-secondary: white;
+  --color-over-tertiary: black;
+  --color-borders: black;
+  --color-over-primary: black;
+  --text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 
-  
-    --spacing-xsmall: 4px;
-    --spacing-small: 8px;
-    --spacing-medium: 16px;
-    --spacing-large: 32px;
-    --spacing-xlarge: 64px;
-  
-    --border-radius: 12px;
+  --spacing-xsmall: 4px;
+  --spacing-small: 8px;
+  --spacing-medium: 16px;
+  --spacing-large: 32px;
+  --spacing-xlarge: 64px;
 
-    --icon-small: 32px;
-    --icon-medium: 48px;
-    --icon-large: 60px;
-  }
+  --border-radius: 12px;
+
+  --icon-small: 32px;
+  --icon-medium: 48px;
+  --icon-large: 60px;
+}
 
 * {
   margin: 0;
@@ -38,110 +37,111 @@
 }
 
 html {
-    overflow-x: hidden;
-    background-color: var(--color-primary);
+  overflow-x: hidden;
+  background-color: var(--color-primary);
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
-header{
-    color: var(--color-over-secondary);
-    padding: var(--spacing-small) var(--spacing-large);
-    background-color: var(--color-secondary);
+header {
+  color: var(--color-over-secondary);
+  padding: var(--spacing-small) var(--spacing-large);
+  background-color: var(--color-secondary);
 }
 
 main {
-    padding: var(--spacing-small) var(--spacing-large);
+  padding: var(--spacing-small) var(--spacing-large);
 }
 
 .card {
-    border-radius: var(--border-radius);
-    background-color: var(--color-tertiary);
+  border-radius: var(--border-radius);
+  background-color: var(--color-tertiary);
 }
 
 .project-card {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    max-width: 300px;
-    min-height: 200px;
-    padding: var(--spacing-xsmall) var(--spacing-medium);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  max-width: 300px;
+  min-height: 200px;
+  padding: var(--spacing-medium) var(--spacing-medium) var(--spacing-xsmall)
+    var(--spacing-medium);
 }
 
-.project-card .slide-show img{
-    max-height: 300px;
-    object-fit: cover;
-    max-width: 100%;
-    overflow-y: hidden;
+.project-card .slide-show img {
+  max-height: 300px;
+  object-fit: cover;
+  max-width: 100%;
+  overflow-y: hidden;
 }
 
 .project-card:hover .floating {
-    display: block;
+  display: block;
 }
 
 .button {
-    display: none;
-    font-size: 2px;
-    width: fit-content;
-    padding: var(--spacing-xsmall);
-    background-color: rgba(0, 0, 0, 0.25);
+  display: none;
+  font-size: 2px;
+  width: fit-content;
+  padding: var(--spacing-xsmall);
+  background-color: rgba(0, 0, 0, 0.25);
 }
 
 .button:hover {
-    background-color: rgba(0, 0, 0, 0.5);
-    transition: all 200ms;
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: all 200ms;
 }
 
 .button span {
-    font-size: normal;
+  font-size: normal;
 }
 
 .tooltip {
-    cursor: default;
+  cursor: default;
 }
 
-.tooltip .tooltiptext{
-    font-size: x-small;
-    font-family: 'Roboto', sans-serif;
+.tooltip .tooltiptext {
+  font-size: x-small;
+  font-family: "Roboto", sans-serif;
 }
 
 .floating {
-    position: fixed;
-    align-self: flex-end;
-    z-index: 10
+  position: fixed;
+  align-self: flex-end;
+  z-index: 10;
 }
 
 .data {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: 100%;
-    padding: var(--spacing-small) 0px;
-    gap: var(--spacing-small);
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  padding: var(--spacing-small) 0px;
+  gap: var(--spacing-small);
 }
 
 .chip {
-    border-color: var(--color-secondary);
-    box-shadow: 0 0 10px var(--color-secondary);
-    background-color: var(--color-secondary);
-    color: var(--color-over-secondary);
+  border-color: var(--color-secondary);
+  box-shadow: 0 0 10px var(--color-secondary);
+  background-color: var(--color-secondary);
+  color: var(--color-over-secondary);
 }
 
 .icons {
-    display: flex;
-    width: 100%;
-    flex-direction: row;
-    justify-content: end;
-    flex-wrap: wrap;
-    gap: var(--spacing-small);
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: end;
+  flex-wrap: wrap;
+  gap: var(--spacing-small);
 }
 
 .icons .icon {
-    width: var(--icon-small);
-    height: var(--icon-small);
-    object-fit: cover;
-    border-radius: 50%;
-    overflow: hidden;
+  width: var(--icon-small);
+  height: var(--icon-small);
+  object-fit: cover;
+  border-radius: 50%;
+  overflow: hidden;
 }

@@ -1,0 +1,61 @@
+.info-box {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    cursor: default;
+}
+
+.info-box .label {
+    width: 100%;
+    font-size: 12px;
+    opacity: 60%;
+    user-select: none;
+}
+
+.info-box .value {
+    display: inline-block;
+    overflow: hidden;
+    width: 100%;
+    font-size: 14px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    user-select: none;
+}
+
+/* .info-box .label:hover {
+    transition: all 200ms;
+    font-size: medium;
+    cursor: default;
+} */
+
+.info-box .label-box {
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.info-box .label-box .label {
+    display: inline-block;
+    font-size: 14px;
+    width: fit-content;
+    height: fit-content;
+    user-select: none;
+    cursor: inherit;
+    vertical-align: middle;
+}
+
+.info-box .label-box .icon {
+    display: inline-block;
+    font-size: 22px;
+    user-select: none;
+    cursor: inherit;
+    vertical-align: middle;
+}
+
+.info-box.expandable .value{
+    display: none;
+    overflow: visible;
+    white-space: normal;
+    text-align: justify;
+}

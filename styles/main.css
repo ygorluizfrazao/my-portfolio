@@ -1,5 +1,7 @@
 @import "./card.css";
 @import "./divider.css";
+@import "./info-box.css";
+@import "./button.css";
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 :root {
@@ -53,11 +55,53 @@ main {
 }
 
 .project-card {
+    position: relative;
     display: flex;
     flex-direction: column;
     max-width: 300px;
-    max-height: 400px;
+    min-height: 200px;
     padding: var(--spacing-medium);
 }
 
+.project-card .slide-show img{
+    max-height: 300px;
+    object-fit: cover;
+    max-width: 100%;
+    overflow-y: hidden;
+}
 
+.project-card:hover .floating {
+    display: block;
+}
+
+.button {
+    display: none;
+    font-size: 2px;
+    width: fit-content;
+    padding: var(--spacing-xsmall);
+    background-color: rgba(0, 0, 0, 0.25);
+}
+
+.button:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: all 200ms;
+}
+
+.button span {
+    font-size: normal;
+}
+
+.floating {
+    position: fixed;
+    align-self: flex-end;
+    z-index: 999
+}
+
+.data {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    padding: var(--spacing-small) 0px;
+    gap: var(--spacing-small);
+}

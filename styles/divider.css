@@ -1,8 +1,8 @@
 .divider {
     display: block;
-    width: 90%;
+    width: 100%;
     align-self: center;
     opacity: 25%;
-    height: 3px;
+    height: 2px;
     background-color: black;
 }

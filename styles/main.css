@@ -55,6 +55,14 @@ main {
   padding: var(--spacing-small) var(--spacing-large);
 }
 
+.projects-board {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    gap: var(--spacing-medium);
+    flex-wrap: wrap;
+}
+
 .card {
   border-radius: var(--border-radius);
   background-color: var(--color-tertiary);
@@ -62,9 +70,10 @@ main {
 
 .project-card {
   position: relative;
+  flex-shrink: 1;
   display: flex;
   flex-direction: column;
-  max-width: 300px;
+  max-width: 350px;
   min-height: 200px;
   padding: var(--spacing-medium) var(--spacing-medium) var(--spacing-xsmall)
     var(--spacing-medium);
@@ -108,7 +117,7 @@ main {
 }
 
 .floating {
-  position: fixed;
+  position: absolute;
   align-self: flex-end;
   z-index: 10;
 }

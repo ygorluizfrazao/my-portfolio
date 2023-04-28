@@ -1,0 +1,30 @@
+@keyframes rotate180 {
+    0% {
+        transform: rotate(-180deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes rotate180CounterClockwise {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(-180deg);
+    }
+}
+
+
+.rotate180-counter-clockwise {
+    animation-name: rotate180CounterClockwise;
+    animation-duration: 500ms;
+    animation-fill-mode: forwards;
+}
+
+.rotate180 {
+    animation-name: rotate180;
+    animation-duration: 500ms;
+    animation-fill-mode: forwards;
+}

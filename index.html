@@ -37,7 +37,10 @@
       type="text/javascript"
       src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
     ></script>
-    <script defer src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"
+    ></script>
 
     <script defer type="module" src="./scripts/main.js"></script>
 
@@ -48,256 +51,264 @@
       <h1>Ygor Frazão</h1>
     </header>
     <main>
-      <div class="projects-board">
-        <article>
-          <div class="card project-card">
-            <div class="floating button tooltip-host">
-              <div class="icon-container">
-                <span class="icon material-symbols-outlined"> sell </span>
+      <section id="projects">
+        <div class="projects-board">
+          <!-- <article>
+            <div class="card project-card">
+              <div class="floating button tooltip-host">
+                <div class="icon-container">
+                  <span class="icon material-symbols-outlined"> sell </span>
+                </div>
+                <div class="tooltip-frame">
+                  <div class="chip">
+                    <span class="chip-text">ANDROID</span>
+                  </div>
+                  <div class="chip">
+                    <span class="chip-text">IOS</span>
+                  </div>
+                  <div class="chip">
+                    <span class="chip-text">KOTLIN</span>
+                  </div>
+                  <div class="chip">
+                    <span class="chip-text">MVVM</span>
+                  </div>
+                  <div class="chip">
+                    <span class="chip-text">ANDROID STUDIO</span>
+                  </div>
+                </div>
               </div>
-              <div class="tooltip-frame">
-                <div class="chip">
-                  <span class="chip-text">ANDROID</span>
-                </div>
-                <div class="chip">
-                  <span class="chip-text">IOS</span>
-                </div>
-                <div class="chip">
-                  <span class="chip-text">KOTLIN</span>
-                </div>
-                <div class="chip">
-                  <span class="chip-text">MVVM</span>
-                </div>
-                <div class="chip">
-                  <span class="chip-text">ANDROID STUDIO</span>
-                </div>
-              </div>
-            </div>
-            <div class="slide-show">
-              <img
-                src="https://play-lh.googleusercontent.com/LiDp4b6iczWtUCrTrmQS4kICw2yO-XK-nCPZSf-6AcsIaf3ScnHgU0RelucQ1nYmpw4=w2560-h1440-rw"
-              />
-              <img
-                src="https://play-lh.googleusercontent.com/aSPfXBMfYYDzC5l5Vqb55M5BRoaWKVJzBziakBdGJNleiDep1kDfQaz_l2qjdZvGKA=w2560-h1440-rw"
-              />
-              <img
-                src="https://play-lh.googleusercontent.com/XS-AsRPUzYOih1Y3myKmvDIj0UsVU5ouAr-P0dVtqws3lHuqsDb-QOIHJLz2ZvWGHA=w2560-h1440-rw"
-              />
-            </div>
-  
-            <div class="data">
-              <span class="divider"></span>
-              <div class="info-box">
-                <span class="label">Nome</span>
-                <span class="value"
-                  >Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui
-                  unde beatae vitae corporis omnis animi. Hic velit atque
-                  molestiae perspiciatis quisquam exercitationem architecto. Dolor
-                  molestias, voluptatum quibusdam natus dicta accusamus?</span
-                >
-              </div>
-              <div class="info-box">
-                <span class="label">Plataforma</span>
-                <span class="value"
-                  >Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui
-                  unde beatae vitae corporis omnis animi. Hic velit atque
-                  molestiae perspiciatis quisquam exercitationem architecto. Dolor
-                  molestias, voluptatum quibusdam natus dicta accusamus?</span
-                >
-              </div>
-              <div class="info-box expandable">
-                <div class="label-box">
-                  <span class="label">Descrição</span>
-                  <span class="material-symbols-outlined label icon">
-                    expand_more
-                  </span>
-                </div>
-                <span class="value"
-                  >Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui
-                  unde beatae vitae corporis omnis animi. Hic velit atque
-                  molestiae perspiciatis quisquam exercitationem architecto. Dolor
-                  molestias, voluptatum quibusdam natus dicta accusamus?</span
-                >
-              </div>
-              <span class="divider"></span>
-              <div class="icons">
-                <a
-                  href="https://github.com/ygorluizfrazao"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  title="GitHub"
-                >
-                  <img
-                    class="icon"
-                    src="/resources/images/github-logo.png"
-                    alt="github logo"
-                  />
-                </a>
-                <a
-                  href="https://play.google.com/store/apps/details?id=br.com.frazo.caemarcm&hl=pt_BR&gl=US"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  title="Play Store"
-                >
-                  <img
-                    class="icon"
-                    src="/resources/images/google-play-logo.png"
-                    alt="play store logo"
-                  />
-                </a>
-                <a
-                  href="https://apps.apple.com/br/app/caema-mobile/id6443474970"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  title="App Store"
-                >
-                  <img
-                    class="icon"
-                    src="/resources/images/apple-logo.png"
-                    alt="app store logo"
-                  />
-                </a>
-                <a
-                href="https://to-do-list-three-red.vercel.app"
-                target="_blank"
-                rel="noopener noreferrer"
-                title="App Store"
-              >
+              <div class="slide-show">
                 <img
-                  class="icon"
-                  src="/resources/images/site-logo.png"
-                  alt="www logo"
+                  src="https://play-lh.googleusercontent.com/LiDp4b6iczWtUCrTrmQS4kICw2yO-XK-nCPZSf-6AcsIaf3ScnHgU0RelucQ1nYmpw4=w2560-h1440-rw"
                 />
-              </a>
-              </div>
-            </div>
-          </div>
-        </article>
-        <article>
-          <div class="card project-card">
-            <div class="floating button tooltip-host">
-              <div class="icon-container">
-                <span class="icon material-symbols-outlined"> sell </span>
-              </div>
-              <div class="tooltip-frame">
-                <div class="chip">
-                  <span class="chip-text">ANDROID</span>
-                </div>
-                <div class="chip">
-                  <span class="chip-text">IOS</span>
-                </div>
-                <div class="chip">
-                  <span class="chip-text">KOTLIN</span>
-                </div>
-                <div class="chip">
-                  <span class="chip-text">MVVM</span>
-                </div>
-                <div class="chip">
-                  <span class="chip-text">ANDROID STUDIO</span>
-                </div>
-              </div>
-            </div>
-            <div class="slide-show">
-              <img
-                src="https://play-lh.googleusercontent.com/LiDp4b6iczWtUCrTrmQS4kICw2yO-XK-nCPZSf-6AcsIaf3ScnHgU0RelucQ1nYmpw4=w2560-h1440-rw"
-              />
-              <img
-                src="https://play-lh.googleusercontent.com/aSPfXBMfYYDzC5l5Vqb55M5BRoaWKVJzBziakBdGJNleiDep1kDfQaz_l2qjdZvGKA=w2560-h1440-rw"
-              />
-              <img
-                src="https://play-lh.googleusercontent.com/XS-AsRPUzYOih1Y3myKmvDIj0UsVU5ouAr-P0dVtqws3lHuqsDb-QOIHJLz2ZvWGHA=w2560-h1440-rw"
-              />
-            </div>
-  
-            <div class="data">
-              <span class="divider"></span>
-              <div class="info-box">
-                <span class="label">Nome</span>
-                <span class="value"
-                  >Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui
-                  unde beatae vitae corporis omnis animi. Hic velit atque
-                  molestiae perspiciatis quisquam exercitationem architecto. Dolor
-                  molestias, voluptatum quibusdam natus dicta accusamus?</span
-                >
-              </div>
-              <div class="info-box">
-                <span class="label">Plataforma</span>
-                <span class="value"
-                  >Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui
-                  unde beatae vitae corporis omnis animi. Hic velit atque
-                  molestiae perspiciatis quisquam exercitationem architecto. Dolor
-                  molestias, voluptatum quibusdam natus dicta accusamus?</span
-                >
-              </div>
-              <div class="info-box expandable">
-                <div class="label-box">
-                  <span class="label">Descrição</span>
-                  <span class="material-symbols-outlined label icon">
-                    expand_more
-                  </span>
-                </div>
-                <span class="value"
-                  >Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui
-                  unde beatae vitae corporis omnis animi. Hic velit atque
-                  molestiae perspiciatis quisquam exercitationem architecto. Dolor
-                  molestias, voluptatum quibusdam natus dicta accusamus?</span
-                >
-              </div>
-              <span class="divider"></span>
-              <div class="icons">
-                <a
-                  href="https://github.com/ygorluizfrazao"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  title="GitHub"
-                >
-                  <img
-                    class="icon"
-                    src="/resources/images/github-logo.png"
-                    alt="github logo"
-                  />
-                </a>
-                <a
-                  href="https://play.google.com/store/apps/details?id=br.com.frazo.caemarcm&hl=pt_BR&gl=US"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  title="Play Store"
-                >
-                  <img
-                    class="icon"
-                    src="/resources/images/google-play-logo.png"
-                    alt="play store logo"
-                  />
-                </a>
-                <a
-                  href="https://apps.apple.com/br/app/caema-mobile/id6443474970"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  title="App Store"
-                >
-                  <img
-                    class="icon"
-                    src="/resources/images/apple-logo.png"
-                    alt="app store logo"
-                  />
-                </a>
-                <a
-                href="https://to-do-list-three-red.vercel.app"
-                target="_blank"
-                rel="noopener noreferrer"
-                title="App Store"
-              >
                 <img
-                  class="icon"
-                  src="/resources/images/site-logo.png"
-                  alt="www logo"
+                  src="https://play-lh.googleusercontent.com/aSPfXBMfYYDzC5l5Vqb55M5BRoaWKVJzBziakBdGJNleiDep1kDfQaz_l2qjdZvGKA=w2560-h1440-rw"
                 />
-              </a>
+                <img
+                  src="https://play-lh.googleusercontent.com/XS-AsRPUzYOih1Y3myKmvDIj0UsVU5ouAr-P0dVtqws3lHuqsDb-QOIHJLz2ZvWGHA=w2560-h1440-rw"
+                />
+              </div>
+
+              <div class="data">
+                <span class="divider"></span>
+                <div class="info-box">
+                  <span class="label">Nome</span>
+                  <span class="value"
+                    >Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Qui unde beatae vitae corporis omnis animi. Hic velit atque
+                    molestiae perspiciatis quisquam exercitationem architecto.
+                    Dolor molestias, voluptatum quibusdam natus dicta
+                    accusamus?</span
+                  >
+                </div>
+                <div class="info-box">
+                  <span class="label">Plataforma</span>
+                  <span class="value"
+                    >Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Qui unde beatae vitae corporis omnis animi. Hic velit atque
+                    molestiae perspiciatis quisquam exercitationem architecto.
+                    Dolor molestias, voluptatum quibusdam natus dicta
+                    accusamus?</span
+                  >
+                </div>
+                <div class="info-box expandable">
+                  <div class="label-box">
+                    <span class="label">Descrição</span>
+                    <span class="material-symbols-outlined label icon">
+                      expand_more
+                    </span>
+                  </div>
+                  <span class="value"
+                    >Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Qui unde beatae vitae corporis omnis animi. Hic velit atque
+                    molestiae perspiciatis quisquam exercitationem architecto.
+                    Dolor molestias, voluptatum quibusdam natus dicta
+                    accusamus?</span
+                  >
+                </div>
+                <span class="divider"></span>
+                <div class="icons">
+                  <a
+                    href="https://github.com/ygorluizfrazao"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    title="GitHub"
+                  >
+                    <img
+                      class="icon"
+                      src="/resources/images/github-logo.png"
+                      alt="github logo"
+                    />
+                  </a>
+                  <a
+                    href="https://play.google.com/store/apps/details?id=br.com.frazo.caemarcm&hl=pt_BR&gl=US"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    title="Play Store"
+                  >
+                    <img
+                      class="icon"
+                      src="/resources/images/google-play-logo.png"
+                      alt="play store logo"
+                    />
+                  </a>
+                  <a
+                    href="https://apps.apple.com/br/app/caema-mobile/id6443474970"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    title="App Store"
+                  >
+                    <img
+                      class="icon"
+                      src="/resources/images/apple-logo.png"
+                      alt="app store logo"
+                    />
+                  </a>
+                  <a
+                    href="https://to-do-list-three-red.vercel.app"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    title="App Store"
+                  >
+                    <img
+                      class="icon"
+                      src="/resources/images/site-logo.png"
+                      alt="www logo"
+                    />
+                  </a>
+                </div>
               </div>
             </div>
-          </div>
-        </article>
-      </div>
+          </article>
+          <article>
+            <div class="card project-card">
+              <div class="floating button tooltip-host">
+                <div class="icon-container">
+                  <span class="icon material-symbols-outlined"> sell </span>
+                </div>
+                <div class="tooltip-frame">
+                  <div class="chip">
+                    <span class="chip-text">ANDROID</span>
+                  </div>
+                  <div class="chip">
+                    <span class="chip-text">IOS</span>
+                  </div>
+                  <div class="chip">
+                    <span class="chip-text">KOTLIN</span>
+                  </div>
+                  <div class="chip">
+                    <span class="chip-text">MVVM</span>
+                  </div>
+                  <div class="chip">
+                    <span class="chip-text">ANDROID STUDIO</span>
+                  </div>
+                </div>
+              </div>
+              <div class="slide-show">
+                <img
+                  src="https://play-lh.googleusercontent.com/LiDp4b6iczWtUCrTrmQS4kICw2yO-XK-nCPZSf-6AcsIaf3ScnHgU0RelucQ1nYmpw4=w2560-h1440-rw"
+                />
+                <img
+                  src="https://play-lh.googleusercontent.com/aSPfXBMfYYDzC5l5Vqb55M5BRoaWKVJzBziakBdGJNleiDep1kDfQaz_l2qjdZvGKA=w2560-h1440-rw"
+                />
+                <img
+                  src="https://play-lh.googleusercontent.com/XS-AsRPUzYOih1Y3myKmvDIj0UsVU5ouAr-P0dVtqws3lHuqsDb-QOIHJLz2ZvWGHA=w2560-h1440-rw"
+                />
+              </div>
+
+              <div class="data">
+                <span class="divider"></span>
+                <div class="info-box">
+                  <span class="label">Nome</span>
+                  <span class="value"
+                    >Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Qui unde beatae vitae corporis omnis animi. Hic velit atque
+                    molestiae perspiciatis quisquam exercitationem architecto.
+                    Dolor molestias, voluptatum quibusdam natus dicta
+                    accusamus?</span
+                  >
+                </div>
+                <div class="info-box">
+                  <span class="label">Plataforma</span>
+                  <span class="value"
+                    >Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Qui unde beatae vitae corporis omnis animi. Hic velit atque
+                    molestiae perspiciatis quisquam exercitationem architecto.
+                    Dolor molestias, voluptatum quibusdam natus dicta
+                    accusamus?</span
+                  >
+                </div>
+                <div class="info-box expandable">
+                  <div class="label-box">
+                    <span class="label">Descrição</span>
+                    <span class="material-symbols-outlined label icon">
+                      expand_more
+                    </span>
+                  </div>
+                  <span class="value"
+                    >Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Qui unde beatae vitae corporis omnis animi. Hic velit atque
+                    molestiae perspiciatis quisquam exercitationem architecto.
+                    Dolor molestias, voluptatum quibusdam natus dicta
+                    accusamus?</span
+                  >
+                </div>
+                <span class="divider"></span>
+                <div class="icons">
+                  <a
+                    href="https://github.com/ygorluizfrazao"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    title="GitHub"
+                  >
+                    <img
+                      class="icon"
+                      src="/resources/images/github-logo.png"
+                      alt="github logo"
+                    />
+                  </a>
+                  <a
+                    href="https://play.google.com/store/apps/details?id=br.com.frazo.caemarcm&hl=pt_BR&gl=US"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    title="Play Store"
+                  >
+                    <img
+                      class="icon"
+                      src="/resources/images/google-play-logo.png"
+                      alt="play store logo"
+                    />
+                  </a>
+                  <a
+                    href="https://apps.apple.com/br/app/caema-mobile/id6443474970"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    title="App Store"
+                  >
+                    <img
+                      class="icon"
+                      src="/resources/images/apple-logo.png"
+                      alt="app store logo"
+                    />
+                  </a>
+                  <a
+                    href="https://to-do-list-three-red.vercel.app"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    title="App Store"
+                  >
+                    <img
+                      class="icon"
+                      src="/resources/images/site-logo.png"
+                      alt="www logo"
+                    />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article> -->
+        </div>
+      </section>
     </main>
   </body>
 </html>

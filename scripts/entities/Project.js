@@ -40,19 +40,26 @@ export default class Project {
     get tags() {
         return this.#tags
     }
+    #projectImages
+    get projectImages() {
+        return this.#projectImages
+    }
 
     constructor(params){
         this.#id = params.id;
         this.#name = params.name;
         this.#description = params.description;
-        this.#createdAt = params.created_at;
+        this.#createdAt = params.createdAt;
         this.#platform = params.platform;
-        this.#githubLink = params.github_link;
-        this.#siteLink = params.site_link;
-        this.#playStoreLink = params.play_store_link;
-        this.#appStoreLink = params.app_store_link;
+        this.#githubLink = params.githubLink;
+        this.#siteLink = params.siteLink;
+        this.#playStoreLink = params.playStoreLink;
+        this.#appStoreLink = params.appStoreLink;
         if(!!params.tags){
             this.#tags = params.tags.split(',')
+        }
+        if(!!params.projectImages){
+            this.#projectImages = params.projectImages
         }
     }
 }

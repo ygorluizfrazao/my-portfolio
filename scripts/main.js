@@ -1,4 +1,5 @@
 import Project from "./entities/Project.js";
+import ProjectImage from "./entities/ProjectImage.js";
 
 const { createClient } = supabase;
 const supabaseUrl = "https://wzgymqckrzypylpxrnpj.supabase.co";
@@ -8,6 +9,7 @@ const supabaseKey =
 let projects;
 
 $(document).ready(() => {
+
   fetchProjects((projectsResult) => {
     console.log(projectsResult.error);
     if (!!projectsResult.error) {
@@ -21,16 +23,32 @@ $(document).ready(() => {
       return;
     }
 
-    projects = projectsResult.data.map((p) => new Project(p));
-    console.log(projects);
+    projects = projectsResult.data.map((p) => {
+      return new Project({
+        id: p.id,
+        name: p.name,
+        description: p.description,
+        createdAt: p.created_at,
+        platform: p.platform,
+        githubLink: p.github_link,
+        siteLink: p.site_link,
+        playStoreLink: p.play_store_link,
+        appStoreLink: p.apple_store_link,
+        tags: p.tags,
+        projectImages: p.projectImages
+      });
+    });
+    console.log("Projects", projects);
 
-    $('.projects-board').html('')
+    $(".projects-board").html("");
     projects.forEach((project) => {
-      const article = $(`<article></article>`).append(createProjectCard(project))
-      $('.projects-board').append(article);
+      const article = $(`<article></article>`).append(
+        createProjectCard(project)
+      );
+      $(".projects-board").append(article);
     });
 
-    $('.slide-show').slick({
+    $(".slide-show").slick({
       autoplay: true,
       infinite: true,
       dots: true,
@@ -43,14 +61,49 @@ $(document).ready(() => {
 });
 
 async function fetchProjects(callback) {
-  if (!!callback) {
-    const _supabase = createClient(supabaseUrl, supabaseKey);
-    const { data, error } = await _supabase
+  if (!callback) return;
+
+  const _supabase = createClient(supabaseUrl, supabaseKey);
+  const { data, error } = await _supabase
     .from("project")
-    .select()
-    .eq('is_published','true');
-    callback({ data, error });
+    .select(
+      `
+      *,
+      project_images (
+        *
+      )
+    `
+    )
+
+  if (!!error) {
+    callback({ undefined, error });
+    return;
   }
+
+  for (let i in data) {
+    const item = data[i];
+    const projectImages = !!item.project_images
+      ? await Promise.all(
+          item.project_images.map(async (image) => {
+            const imageURLData = await _supabase.storage
+              .from(image.bucket)
+              .getPublicUrl(
+                image.path + "/" + image.project_id + "/" + image.name
+              );
+
+            return new ProjectImage({
+              id: image.id,
+              description: image.description,
+              url: imageURLData.data.publicUrl,
+            });
+          })
+        )
+      : null;
+
+    delete data[i].project_images;
+    data[i].projectImages = projectImages;
+  }
+  callback({ data, error });
 }
 
 function createProjectCard(project) {
@@ -92,19 +145,29 @@ function createTooltipComponent(project) {
 }
 
 function createSlideShowComponent(project) {
-  const slideShow =  $(`
+  const slideShow = $(`
   <div class="slide-show">
-    <img
-      src="https://play-lh.googleusercontent.com/LiDp4b6iczWtUCrTrmQS4kICw2yO-XK-nCPZSf-6AcsIaf3ScnHgU0RelucQ1nYmpw4=w2560-h1440-rw"
-    />
-    <img
-      src="https://play-lh.googleusercontent.com/aSPfXBMfYYDzC5l5Vqb55M5BRoaWKVJzBziakBdGJNleiDep1kDfQaz_l2qjdZvGKA=w2560-h1440-rw"
-    />
-    <img
-      src="https://play-lh.googleusercontent.com/XS-AsRPUzYOih1Y3myKmvDIj0UsVU5ouAr-P0dVtqws3lHuqsDb-QOIHJLz2ZvWGHA=w2560-h1440-rw"
-    />
   </div>
   `);
+
+  console.log(!project.projectImages)
+  if (!project.projectImages || project.projectImages.length===0) {
+    $(`    
+    <img
+    src = "resources/images/no-image-available.jpg"
+    alt = "Sem imagens disponíveis"
+    />`).appendTo(slideShow);
+    return slideShow;
+  }
+
+  project.projectImages.forEach((image) => {
+    $(`
+    <img
+    src="${image.url}"
+    alt="${image.description}"
+    />`).appendTo(slideShow);
+  })
+  
   return slideShow;
 }
 

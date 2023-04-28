@@ -1,3 +1,5 @@
+@import "../animations/rotation.css";
+
 .info-box {
     display: flex;
     flex-direction: column;
@@ -23,12 +25,6 @@
     user-select: none;
 }
 
-/* .info-box .label:hover {
-    transition: all 200ms;
-    font-size: medium;
-    cursor: default;
-} */
-
 .info-box .label-box {
     display: flex;
     justify-content: space-between;
@@ -45,7 +41,7 @@
     vertical-align: middle;
 }
 
-.info-box .label-box .icon {
+.info-box.expandable .label-box .icon {
     display: inline-block;
     font-size: 22px;
     user-select: none;
@@ -58,4 +54,8 @@
     overflow: visible;
     white-space: normal;
     text-align: justify;
+}
+
+.info-box.expandable .label-box span {
+    pointer-events: none;
 }

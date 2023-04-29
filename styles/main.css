@@ -17,6 +17,10 @@
   --color-over-tertiary: black;
   --color-borders: black;
   --color-over-primary: black;
+
+  --color-error-container: red;
+  --color-over-error-container: red;
+  
   --text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 
   --spacing-xsmall: 4px;
@@ -50,7 +54,8 @@ body {
   min-height: 100vh;
 }
 
-.top-bar, .bottom-bar {
+.top-bar,
+.bottom-bar {
   width: 100%;
 }
 
@@ -61,7 +66,7 @@ body {
   margin-bottom: 0;
 }
 
-.footer  {
+.footer {
   width: 100%;
   color: var(--color-over-secondary);
   padding: var(--spacing-small) var(--spacing-large);
@@ -107,11 +112,11 @@ main {
 }
 
 .projects-board {
-    display: flex;
-    width: 100%;
-    flex-direction: row;
-    gap: var(--spacing-medium);
-    flex-wrap: wrap;
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  gap: var(--spacing-medium);
+  flex-wrap: wrap;
 }
 
 .card {

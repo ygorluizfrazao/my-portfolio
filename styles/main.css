@@ -4,6 +4,7 @@
 @import "./controls/button.css";
 @import "./controls/tooltip.css";
 @import "./controls/chip.css";
+@import "./controls/message-panel.css";
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 
 :root {
@@ -19,8 +20,8 @@
   --color-over-primary: black;
 
   --color-error-container: red;
-  --color-over-error-container: red;
-  
+  --color-over-error-container: white;
+
   --text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 
   --spacing-xsmall: 4px;
@@ -107,9 +108,12 @@ main {
   padding: var(--spacing-small) var(--spacing-large);
 }
 
-#projects {
-  /* display: none; */
+.card.message-panel{
+  border-radius: 0;
+  background-color: var(--color-error-container);
+  color: var(--color-over-error-container);
 }
+
 
 .projects-board {
   display: flex;

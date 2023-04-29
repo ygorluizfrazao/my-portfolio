@@ -1,0 +1,25 @@
+.message-panel {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: 8px;
+    font-weight: bold;
+    align-content: center;
+}
+
+.message-panel .message {
+    display: inline-flex;
+    align-items: center;
+    user-select: none;
+    font-size: small;
+    overflow-x: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    margin-right: 12px;
+    width: 100%;
+}
+
+.message-panel .message-dismiss-icon {
+    user-select: none;
+    cursor: pointer;
+}

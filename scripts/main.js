@@ -1,23 +1,31 @@
 import Project from "./entities/Project.js";
 import createProjectCard from "./ui/ProjectCard.js";
 import SupabaseProjectRepository from "./repository/supabase/SupabaseProjectsRepository.js";
-
-const { createClient } = supabase;
-const supabaseUrl = "https://wzgymqckrzypylpxrnpj.supabase.co";
-const supabaseKey =
-  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Ind6Z3ltcWNrcnp5cHlscHhybnBqIiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODI2MzIzOTgsImV4cCI6MTk5ODIwODM5OH0.i9kLdGlDEQxP9yGzN-cKUzi2bkCSzxMurU7PwTvalvY";
+import MessagePanel from "./ui/MessagePanel.js";
 
 let projects;
+const errorMessagePanel = new MessagePanel(".message-panel");
 
 $(document).ready(() => {
+  console.log(errorMessagePanel);
+  populateProjectsBoard(
+    () => startSlides(),
+    (erro) => {
+      errorMessagePanel.displayMessage("Erro: " + erro
+      ,()=> console.log("Closed by user"),
+      7000)
+    });
+});
+
+function populateProjectsBoard(onFinished, onError, onEmpty) {
   SupabaseProjectRepository.fetchProjects((projectsResult) => {
     if (!!projectsResult.error) {
-      alert("Erro: " + projectsResult.error);
+      onError(projectsResult.error);
       return;
     }
 
     if (!projectsResult.data) {
-      alert("Error: Não foram localizados projetos para exibir");
+      onEmpty();
       return;
     }
 
@@ -44,10 +52,9 @@ $(document).ready(() => {
       );
       $(".projects-board").append(article);
     });
-
-    startSlides();
+    onFinished();
   });
-});
+}
 
 function startSlides() {
   $(".slide-show").slick({

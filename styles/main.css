@@ -7,11 +7,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 
 :root {
-  --color-primary: #c7daf7;
-  --color-secondary: #485ede;
+  --color-primary: #dbd6ec;
+  --color-secondary: #0d1e84;
+  --color-secondary-variant: #152fc1;
   --color-tertiary: white;
   --color-over-primary: black;
   --color-over-secondary: white;
+  --color-over-secondary-variant: white;
   --color-over-tertiary: black;
   --color-borders: black;
   --color-over-primary: black;
@@ -42,17 +44,66 @@ html {
 }
 
 body {
+  display: flex;
+  flex-direction: column;
   font-family: "Roboto", sans-serif;
+  min-height: 100vh;
 }
 
-header {
+.top-bar, .bottom-bar {
+  width: 100%;
+}
+
+.bottom-bar {
+  z-index: 1;
+  align-self: flex-end;
+  margin: auto;
+  margin-bottom: 0;
+}
+
+.footer  {
+  width: 100%;
+  color: var(--color-over-secondary);
+  padding: var(--spacing-small) var(--spacing-large);
+  background-color: var(--color-secondary-variant);
+}
+
+.title {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
   color: var(--color-over-secondary);
   padding: var(--spacing-small) var(--spacing-large);
   background-color: var(--color-secondary);
+  z-index: 9999;
+}
+
+.menu {
+  background-color: var(--color-secondary-variant);
+  gap: var(--spacing-large);
+  list-style: none;
+  color: var(--color-over-secondary-variant);
+  display: flex;
+  padding: var(--spacing-small) var(--spacing-large);
+  width: 100%;
+}
+
+.menu li {
+  cursor: pointer;
+  user-select: none;
+}
+
+.menu li:hover {
+  font-weight: bold;
 }
 
 main {
   padding: var(--spacing-small) var(--spacing-large);
+}
+
+#projects {
+  /* display: none; */
 }
 
 .projects-board {

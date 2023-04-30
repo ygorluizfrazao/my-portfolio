@@ -106,10 +106,16 @@ body {
 .menu li {
   cursor: pointer;
   user-select: none;
+  height: 100%;
 }
 
 .menu li:hover {
+  font-weight: bolder;
+}
+
+#menu-projects {
   font-weight: bold;
+  border-bottom: 2px double var(--color-over-secondary-variant);
 }
 
 main {

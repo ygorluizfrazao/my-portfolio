@@ -19,6 +19,7 @@ $(document).ready(() => {
 
 function populateProjectsBoard(onFinished, onError, onEmpty) {
   SupabaseProjectRepository.fetchProjects((projectsResult) => {
+
     if (!!projectsResult.error) {
       onError(projectsResult.error);
       return;

@@ -1,10 +1,13 @@
 .message-panel {
-    display: flex;
+    position: sticky;
+    top: 0;
+    display: none;
     width: 100%;
     justify-content: space-between;
     padding: 8px;
     font-weight: bold;
     align-content: center;
+    z-index: 9999;
 }
 
 .message-panel .message {

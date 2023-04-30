@@ -134,7 +134,7 @@ main {
   flex-direction: row;
   gap: var(--spacing-medium);
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: flex-start;
 }
 
 .card {

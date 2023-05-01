@@ -55,6 +55,7 @@ body {
   flex-direction: column;
   font-family: "Roboto", sans-serif;
   min-height: 100vh;
+  min-width: 100vw;
 }
 
 .top-bar,

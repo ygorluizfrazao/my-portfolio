@@ -1,0 +1,90 @@
+:root {
+    --min-panel--width: 260px;
+}
+
+.about-panel {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    left: 0;
+    min-width: var(--min-panel--width);
+    width: 30%;
+    background-color: var(--color-primary);
+    padding: var(--spacing-medium);
+    margin-right: 24px;
+}
+
+.about-panel .close-open-drawer {
+    position: relative;
+    user-select: none;
+    border-radius: 0;
+    height: fit-content;
+    background-color: var(--color-secondary);
+    color: var(--color-over-secondary);
+    top: 20px;
+    left: 100%;
+    cursor: pointer;
+    pointer-events: all;
+}
+
+.about-panel .close-open-drawer span{
+    pointer-events: none;
+}
+
+.about-panel .divider {
+  margin-top: var(--spacing-small);
+  margin-bottom: var(--spacing-small);
+}
+
+.about-panel .profile-title-container {
+    display: flex;
+    gap: var(--spacing-small);
+    align-items: center;
+    justify-items: center;
+}
+
+.about-panel .profile-title-container .profile-picture{
+    user-select: none;
+    min-width: 48px;
+    max-width: 12vmin;
+    border-radius: 50%;
+    border: 2px solid white;
+}
+
+.about-panel .profile-title-container .title-data h2{
+    text-align: start;
+    font-size: 3vmin;
+}
+
+.about-panel .profile-title-container .title-data p{
+    text-align: start;
+    white-space: pre-wrap;
+    word-break: break-all;
+    font-size: 2vmin;
+}
+
+.about-panel .presentation  p{
+    text-align: justify;
+    font-size: 2.5vmin;
+}
+
+.about-panel.close {
+    min-width: 0%;
+    width: 0%;
+    transition: all 500ms;
+}
+
+.about-panel.close .content{
+    opacity: 0;
+}
+
+.about-panel.open {
+    min-width: var(--min-panel--width);
+    width: 30%;
+    transition: all 500ms;
+}
+
+.about-panel.open .content{
+    opacity: 1;
+    transition: all 500ms;
+}

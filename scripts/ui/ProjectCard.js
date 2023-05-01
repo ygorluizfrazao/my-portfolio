@@ -84,12 +84,14 @@ export default function createProjectCard(project) {
   
     createHorizontalDivider().appendTo(dataSection);
   
-    !!project.githubLink ||
-    !!project.playStoreLink ||
-    !!project.appStoreLink ||
-    !!project.siteLink
-      ? createIconsPanel(project).appendTo(dataSection)
-      : null;
+    // !!project.githubLink ||
+    // !!project.playStoreLink ||
+    // !!project.appStoreLink ||
+    // !!project.siteLink
+    //   ? createIconsPanel(project).appendTo(dataSection)
+    //   : null;
+
+    createIconsPanel(project).appendTo(dataSection)
   
     return dataSection;
   }

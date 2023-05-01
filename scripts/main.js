@@ -7,19 +7,21 @@ let projects;
 const errorMessagePanel = new MessagePanel(".message-panel");
 
 $(document).ready(() => {
-  console.log(errorMessagePanel);
+  appendCloseAboutBehaviour();
   populateProjectsBoard(
     () => startSlides(),
     (erro) => {
-      errorMessagePanel.displayMessage("Erro: " + erro
-      ,()=> console.log("Closed by user"),
-      7000)
-    });
+      errorMessagePanel.displayMessage(
+        "Erro: " + erro,
+        () => console.log("Closed by user"),
+        7000
+      );
+    }
+  );
 });
 
 function populateProjectsBoard(onFinished, onError, onEmpty) {
   SupabaseProjectRepository.fetchProjects((projectsResult) => {
-
     if (!!projectsResult.error) {
       onError(projectsResult.error);
       return;
@@ -66,5 +68,22 @@ function startSlides() {
     fade: true,
     cssEase: "linear",
     arrows: false,
+  });
+}
+
+function appendCloseAboutBehaviour() {
+  $(".about-panel .close-open-drawer").click((e) => {
+
+    if ($(e.target).parent().hasClass("open")) {
+      $(e.target).children().first().addClass("rotate180-counter-clockwise")
+      $(e.target).children().first().removeClass("rotate180")
+      $(e.target).parent().addClass("close");
+      $(e.target).parent().removeClass("open");
+    }else{
+      $(e.target).children().first().addClass("rotate180")
+      $(e.target).children().first().removeClass("rotate180-counter-clockwise")
+      $(e.target).parent().addClass("open");
+      $(e.target).parent().removeClass("close");
+    }
   });
 }

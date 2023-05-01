@@ -5,6 +5,7 @@
 @import "./controls/tooltip.css";
 @import "./controls/chip.css";
 @import "./controls/message-panel.css";
+@import "about-panel.css";
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 
 :root {
@@ -47,7 +48,6 @@
 
 html {
   overflow-x: hidden;
-  background-color: var(--color-primary);
 }
 
 body {
@@ -66,7 +66,6 @@ body {
 .bottom-bar {
   z-index: 1;
   align-self: flex-end;
-  margin: auto;
   margin-bottom: 0;
 }
 
@@ -118,8 +117,12 @@ body {
   border-bottom: 2px double var(--color-over-secondary-variant);
 }
 
+.content-container {
+  display: inline-flex;
+}
+
 main {
-  padding: var(--spacing-small) var(--margin-horizontal);
+  padding-left: var(--spacing-medium);
 }
 
 .card.message-panel {
@@ -135,6 +138,7 @@ main {
   gap: var(--spacing-medium);
   flex-wrap: wrap;
   justify-content: flex-start;
+  margin-top: var(--spacing-large);
 }
 
 .card {
@@ -148,16 +152,14 @@ main {
   flex-grow: 1;
   display: flex;
   flex-direction: column;
-  max-width: 85vw;
-  width: 320px;
-  min-width: 200px;
-  min-height: 200px;
+  width: 35vmin;
+  min-width: 250px;
   padding: var(--spacing-medium) var(--spacing-medium) var(--spacing-xsmall)
     var(--spacing-medium);
 }
 
 .project-card .slide-show img {
-  max-height: 300px;
+  height: 300px;
   object-fit: cover;
   max-width: 100%;
   overflow-y: hidden;
@@ -222,6 +224,7 @@ main {
   justify-content: end;
   flex-wrap: wrap;
   gap: var(--spacing-small);
+  min-height: var(--icon-small);
 }
 
 .icons .icon {

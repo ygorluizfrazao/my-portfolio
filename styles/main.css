@@ -118,7 +118,7 @@ body {
 }
 
 .content-container {
-  display: inline-flex;
+  display: flex;
 }
 
 main {

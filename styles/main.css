@@ -52,6 +52,7 @@ html {
 
 body {
   display: flex;
+  overflow-x: hidden;
   flex-direction: column;
   font-family: "Roboto", sans-serif;
   min-height: 100vh;
@@ -120,6 +121,9 @@ body {
 
 .content-container {
   display: flex;
+  flex-grow: 1;
+  height: 100%;
+  width: 100%;
 }
 
 main {

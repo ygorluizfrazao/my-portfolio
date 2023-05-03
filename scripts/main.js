@@ -75,8 +75,8 @@ function appendDrawerBehaviour() {
 
   if(window.matchMedia("(max-width: 640px)").matches) {
     $(".about-panel").addClass("close")
-    $(e.target).children().first().addClass("rotate180")
-    $(e.target).children().first().removeClass("rotate180-counter-clockwise")
+    $(".about-panel .close-open-drawer").first().addClass("rotate180")
+    $(".about-panel .close-open-drawer").first().removeClass("rotate180-counter-clockwise")
   } else {
     $(".about-panel").addClass("open")
   }

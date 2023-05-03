@@ -7,7 +7,7 @@ let projects;
 const errorMessagePanel = new MessagePanel(".message-panel");
 
 $(document).ready(() => {
-  appendCloseAboutBehaviour();
+  appendDrawerBehaviour();
   populateProjectsBoard(
     () => startSlides(),
     (erro) => {
@@ -71,9 +71,15 @@ function startSlides() {
   });
 }
 
-function appendCloseAboutBehaviour() {
-  $(".about-panel .close-open-drawer").click((e) => {
+function appendDrawerBehaviour() {
 
+  if(window.matchMedia("(max-width: 640px)").matches) {
+    $(".about-panel").addClass("close")
+  } else {
+    $(".about-panel").addClass("open")
+  }
+
+  $(".about-panel .close-open-drawer").click((e) => {
     if ($(e.target).parent().hasClass("open")) {
       $(e.target).children().first().addClass("rotate180-counter-clockwise")
       $(e.target).children().first().removeClass("rotate180")
